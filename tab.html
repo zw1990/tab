@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		html {color:#000;background:#fff;-webkit-text-size-adjust: none; }
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {margin:0;padding:0;}
+		body,button,input,select,textarea{font:12px/21px "Open Sans", Helvetica, Arial, sans-serif;}
+		h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:500;}
+		input,select,textarea{font-size:100%;}
+		ol,ul {list-style:none;}
+		i,em { font-style: normal;}
+		caption,th,td {text-align:left;}
+		img{border:0;vertical-align: middle; background-color: #fff}
+		iframe{display:block; }
+		a { color: #000; outline: none; text-decoration:none;} 
+		a:hover {text-decoration: none;color: #666;}
+		a:hover img{opacity: 0.9;filter:alpha(opacity=90);}
+		strong{font-weight: 400;}
+		body{width: 100%;overflow-x: hidden;}
+	</style>
+</head>
+<body>
+	<div id="tab">
+		<ul>
+			<li>tab1</li>
+			<li>tab2</li>
+			<li>tab3</li>
+			<li>tab4</li>
+		</ul>
+	</div>
+	<div id="tab-pannel">
+		<div class="pannel">菜单一</div>
+		<div class="pannel">菜单二</div>
+		<div class="pannel">菜单三</div>
+		<div class="pannel">菜单四</div>
+	</div>
+	<style type="text/css">
+		#tab{height: 25px;overflow: hidden;;}
+		#tab li{width: 50px;height: 25px;line-height: 25px;background: #ccc;color: #fff;font-size: 20px;text-align: center;float: left;cursor: pointer;}
+		#tab li.current{background: #000;}
+		#tab-pannel{width: 200px;height: 100px;background: #ddd;overflow: hidden;color: #fff;font-size: 20px;}
+		.pannel{width: 100%;height: 100%;}
+	</style>
+	<script src="tab.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		new TabModule({
+			target: "tab-pannel",
+			control: "tab",
+			type: "mouseover",
+			auto: true,
+			current: 2,
+			stay: 1000
+		})
+	</script>
+</body>
+</html>
